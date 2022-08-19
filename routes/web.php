@@ -23,6 +23,9 @@ Route::post('/store-image', [ImageUploadController::class, 'storeImage'])->name(
 //For showing an image
 Route::get('/view-image',[ImageUploadController::class, 'viewImage'])->name('images.view');
 
+//For Detect face of an image
+Route::get('/detect-face',[ImageUploadController::class, 'detectFace'])->name('image.detect');
+
 Route::get('/', function () {
     return view('welcome');
 });

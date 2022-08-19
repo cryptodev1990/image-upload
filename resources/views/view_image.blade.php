@@ -13,7 +13,12 @@
       <tr>
         <td>{{$data->id}}</td>
         <td>
-          <img src="{{ url('public/Image/'.$data->image) }}" style="height: 100px; width: 150px;">
+          <img src="{{ url('Image/'.$data->image) }}" style="height: 100px; width: 150px;">
+        </td>
+        <td>
+          <form action="{{ route('image.detect') }}">
+            <button type="submit" class="btn btn-success">Detect Face</button>
+          </form>
         </td>
       </tr>
       @endforeach
